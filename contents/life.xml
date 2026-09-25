@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html
+  b:css='false'
+  b:defaultwidgetversion='2'
+  b:layoutsVersion='3'
+  b:responsive='true'
+  expr:dir='data:blog.languageDirection'
+  xmlns='http://www.w3.org/1999/xhtml'
+  xmlns:b='http://www.google.com/2005/gml/b'
+  xmlns:data='http://www.google.com/2005/gml/data'
+  xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+  <b:include data='blog' name='all-head-content'/>
+
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <title><data:blog.pageTitle/></title>
+
+  <b:skin><![CDATA[
+
+    :root {
+      --bg: #faf9f6;
+      --text: #202020;
+      --muted: #777;
+      --line: #e8e6e1;
+      --max: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .site {
+      width: min(var(--max), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* Header */
+
+    .site-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 32px;
+      padding: 34px 0 45px;
+    }
+
+    .brand-title {
+      margin: 0;
+      font-size: 25px;
+      font-weight: 650;
+      letter-spacing: -0.04em;
+    }
+
+    .brand-subtitle {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 25px;
+      padding-top: 6px;
+      font-size: 14px;
+    }
+
+    .nav a {
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav a:hover {
+      border-color: currentColor;
+    }
+
+    /* Feed */
+
+    .feed {
+      display: grid;
+      gap: 65px;
+    }
+
+    .feed-post {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(180px, 1fr);
+      gap: 34px;
+      align-items: start;
+    }
+
+    .feed-photo {
+      overflow: hidden;
+      border-radius: 7px;
+      background: #eee;
+      aspect-ratio: 16 / 9;
+    }
+
+    .feed-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .post-meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+
+    .post-label {
+      margin-left: 7px;
+    }
+
+    .post-title {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      line-height: 1.25;
+      font-weight: 400;
+    }
+
+    /* Post page */
+
+    .single-post {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .single-post .post-title {
+      font-size: clamp(32px, 5vw, 48px);
+      margin-bottom: 9px;
+    }
+
+    .single-post .post-body {
+      margin-top: 32px;
+    }
+
+    .single-post .post-body img {
+      width: 100%;
+      border-radius: 7px;
+      margin: 12px 0;
+    }
+
+    .single-post .post-body p {
+      max-width: 650px;
+    }
+
+    /* Blogger often wraps uploaded photos in links/divs.
+       Keep those wrappers visually neutral. */
+
+    .post-body .separator {
+      margin: 12px 0 !important;
+      text-align: left !important;
+    }
+
+    .post-body .separator a {
+      margin: 0 !important;
+    }
+
+    /* Pagination */
+
+    .pager {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 70px 0 40px;
+      font-size: 13px;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      padding: 70px 0 35px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 700px) {
+
+      .site {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .site-header {
+        display: block;
+        padding: 24px 0 30px;
+      }
+
+      .brand-title {
+        font-size: 22px;
+      }
+
+      .nav {
+        margin-top: 24px;
+        gap: 22px;
+        overflow-x: auto;
+      }
+
+      .feed {
+        gap: 48px;
+      }
+
+      .feed-post {
+        display: block;
+      }
+
+      .feed-info {
+        margin-top: 12px;
+      }
+
+      .post-title {
+        font-size: 20px;
+      }
+
+      .single-post .post-title {
+        font-size: 32px;
+      }
+
+    }
+
+  ]]></b:skin>
+</head>
+
+<body>
+
+  <div class='site'>
+
+    <header class='site-header'>
+
+      <div>
+        <a expr:href='data:blog.homepageUrl'>
+          <h1 class='brand-title'>life.pqa.icu</h1>
+        </a>
+
+        <div class='brand-subtitle'>
+          small moments outside work
+        </div>
+      </div>
+
+      <nav class='nav'>
+        <a expr:href='data:blog.homepageUrl'>All</a>
+        <a href='/search/label/Balcony'>Balcony</a>
+        <a href='/search/label/Camping'>Camping</a>
+      </nav>
+
+    </header>
+
+
+    <main>
+
+      <b:section
+        id='main'
+        class='main'
+        maxwidgets='1'
+        showaddelement='no'>
+
+        <b:widget
+          id='Blog1'
+          locked='true'
+          title='Blog Posts'
+          type='Blog'
+          version='2'
+          visible='true'>
+
+          <b:includable id='main' var='this'>
+
+            <!-- SINGLE POST -->
+
+            <b:if cond='data:blog.pageType == "item"'>
+
+              <b:loop values='data:posts' var='post'>
+
+                <article class='single-post'>
+
+                  <div class='post-meta'>
+
+                    <data:post.timestamp/>
+
+                    <b:loop values='data:post.labels' var='label'>
+                      <span class='post-label'>
+                        · <data:label.name/>
+                      </span>
+                    </b:loop>
+
+                  </div>
+
+                  <h1 class='post-title'>
+                    <data:post.title/>
+                  </h1>
+
+                  <div class='post-body'>
+                    <data:post.body/>
+                  </div>
+
+                </article>
+
+              </b:loop>
+
+
+            <!-- HOME / LABEL / ARCHIVE -->
+
+            <b:else/>
+
+              <div class='feed'>
+
+                <b:loop values='data:posts' var='post'>
+
+                  <article class='feed-post'>
+
+                    <a
+                      class='feed-photo'
+                      expr:href='data:post.url'>
+
+                      <b:if cond='data:post.featuredImage'>
+
+                        <img
+                          expr:alt='data:post.title'
+                          expr:src='resizeImage(data:post.featuredImage, 1000)'
+                          loading='lazy'/>
+
+                      </b:if>
+
+                    </a>
+
+
+                    <div class='feed-info'>
+
+                      <div class='post-meta'>
+
+                        <data:post.timestamp/>
+
+                        <b:loop
+                          values='data:post.labels'
+                          var='label'>
+
+                          <span class='post-label'>
+                            · <data:label.name/>
+                          </span>
+
+                        </b:loop>
+
+                      </div>
+
+                      <h2 class='post-title'>
+                        <a expr:href='data:post.url'>
+                          <data:post.title/>
+                        </a>
+                      </h2>
+
+                    </div>
+
+                  </article>
+
+                </b:loop>
+
+              </div>
+
+            </b:if>
+
+
+            <!-- PAGINATION -->
+
+            <nav class='pager'>
+
+              <div>
+                <b:if cond='data:newerPageUrl'>
+                  <a expr:href='data:newerPageUrl'>
+                    ← Newer
+                  </a>
+                </b:if>
+              </div>
+
+              <div>
+                <b:if cond='data:olderPageUrl'>
+                  <a expr:href='data:olderPageUrl'>
+                    Older →
+                  </a>
+                </b:if>
+              </div>
+
+            </nav>
+
+          </b:includable>
+
+        </b:widget>
+
+      </b:section>
+
+    </main>
+
+
+    <footer class='site-footer'>
+      life.pqa.icu
+    </footer>
+
+  </div>
+
+</body>
+</html>
