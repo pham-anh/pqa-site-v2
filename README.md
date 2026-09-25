@@ -8,6 +8,8 @@ The portfolio content is embedded directly in the theme. A published Blogger pos
 
 ```text
 .
+├── assets/
+│   └── avatar2025.png
 ├── README.md
 └── contents/
     └── hp.xml       # Complete Blogger theme
@@ -89,13 +91,13 @@ Run `xmllint` after editing and before copying the theme into Blogger.
 
 ## Avatar
 
-The current theme loads the avatar from:
+The avatar is stored in this repository at [`assets/avatar2025.png`](assets/avatar2025.png). The theme loads it from:
 
 ```text
-https://raw.githubusercontent.com/pham-anh/pqa-site/draft/homepage-redesign/static/avatar2025.png
+https://raw.githubusercontent.com/pham-anh/pqa-site-v2/main/assets/avatar2025.png
 ```
 
-This works while that branch remains available. For a permanent Blogger-hosted image:
+Keeping the asset on `main` gives the theme a stable URL. If you prefer a Blogger-hosted image:
 
 1. Create a draft post in Blogger.
 2. Insert the avatar image.
