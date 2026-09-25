@@ -10,10 +10,13 @@ The portfolio content is embedded directly in the theme. A published Blogger pos
 .
 ├── assets/
 │   └── avatar2025.png
+├── CHATGPT_PROJECT.md
 ├── README.md
 └── contents/
     └── hp.xml       # Complete Blogger theme
 ```
+
+For reusable ChatGPT project context and the recommended update workflow, see [`CHATGPT_PROJECT.md`](CHATGPT_PROJECT.md).
 
 ## Requirements
 
