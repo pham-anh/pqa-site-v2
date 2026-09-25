@@ -133,14 +133,36 @@ An A record and CNAME cannot coexist with the same `www` name. Remove a previous
 
 Only change the root domain after `www.pqa.icu` works correctly.
 
-Configure these four A records for the root (`@`):
+In the DNS form, enter `@` in the **Name** field. The `@` symbol means the root domain `pqa.icu`.
+
+First remove any old Firebase root record, such as:
 
 ```text
-@    A    216.239.32.21
-@    A    216.239.34.21
-@    A    216.239.36.21
-@    A    216.239.38.21
+Type: A
+Name: @
+IP address: 199.36.158.100
 ```
+
+Then add the following four records **one at a time**:
+
+| Type | Name | TTL | IP address |
+|---|---|---|---|
+| A | `@` | 1 hr | `216.239.32.21` |
+| A | `@` | 1 hr | `216.239.34.21` |
+| A | `@` | 1 hr | `216.239.36.21` |
+| A | `@` | 1 hr | `216.239.38.21` |
+
+The same values in plain-text form are:
+
+```text
+Type    Name    TTL     IP address
+A       @       1 hr    216.239.32.21
+A       @       1 hr    216.239.34.21
+A       @       1 hr    216.239.36.21
+A       @       1 hr    216.239.38.21
+```
+
+Leave the **Priority** field empty or as `N/A`; A records do not use it. Do not keep the old Firebase `@` record alongside these Blogger records.
 
 Then enable **Redirect domain** in Blogger so that:
 
