@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css="false" b:defaultwidgetversion="2" b:layoutsVersion="3" b:responsive="true" expr:dir="data:blog.languageDirection" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Anh Pham — backend and cloud engineer in Osaka." name="description"/>
+<b:include data="blog" name="all-head-content"/>
+<title><data:blog.pageTitle/></title>
+<b:skin><![CDATA[
+:root{--bg:#111212;--text:#deded9;--muted:#92948f;--faint:#242625;--link:#c5cec7;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:32px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:5px}a:focus-visible{outline:2px solid var(--text);outline-offset:5px}
+.page{width:min(860px,calc(100% - 48px));margin:auto}
+header{display:flex;justify-content:space-between;align-items:center;padding:30px 0;border-bottom:1px solid var(--faint)}
+.name{font-weight:600;color:var(--text)}nav{display:flex;gap:22px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.hero{padding:110px 0 90px}.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:54px;align-items:start}.avatar{width:112px;height:112px;border-radius:50%;object-fit:cover;border:1px solid var(--faint);filter:saturate(.72) brightness(.88)}.kicker,.meta{color:var(--muted);font-size:13px}.hero h1{font-size:clamp(42px,7vw,72px);line-height:1.05;letter-spacing:-3px;font-weight:500;max-width:760px;margin:20px 0 26px}.hero p{font-size:18px;color:var(--muted);max-width:620px;margin:0}.hero-links{display:flex;gap:24px;margin-top:34px;font-size:14px}
+section{padding:72px 0;border-top:1px solid var(--faint)}.section-head{display:grid;grid-template-columns:190px 1fr;gap:36px;margin-bottom:42px}.section-head h2{font-size:14px;font-weight:500;margin:0}.section-head p{color:var(--muted);margin:0;max-width:590px}
+.work{display:grid;grid-template-columns:190px 1fr;gap:36px;padding:27px 0;border-top:1px solid var(--faint)}.work:first-of-type{border-top:0;padding-top:0}.work time,.work-label{color:var(--muted);font-size:13px}.work h3{font-size:22px;line-height:1.35;font-weight:500;margin:0 0 10px}.work p{color:var(--muted);margin:0}.result{color:var(--text);margin-top:14px!important;font-size:14px}.tags{margin-top:14px;color:var(--muted);font-size:12px;word-spacing:8px}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:32px 50px}.skill h3{font-size:16px;font-weight:500;margin:0 0 8px}.skill p{font-size:14px;color:var(--muted);margin:0}
+.timeline .work h3{font-size:18px}.timeline ul{color:var(--muted);padding-left:18px;margin:12px 0 0}.timeline li{margin:6px 0}
+.cert{display:grid;grid-template-columns:110px 1fr auto;gap:22px;padding:18px 0;border-top:1px solid var(--faint);align-items:baseline}.cert:first-of-type{border-top:0}.cert time,.cert span,.cert a{font-size:13px;color:var(--muted)}.cert strong{font-weight:500}.cert a{white-space:nowrap}
+.education{display:grid;grid-template-columns:1fr 1fr;gap:50px}.education h3{font-size:18px;font-weight:500;margin:5px 0}.education p{color:var(--muted);font-size:14px;margin:0}.language{display:flex;justify-content:space-between;gap:20px;padding:9px 0;border-bottom:1px solid var(--faint);font-size:14px}.language span{color:var(--muted);text-align:right}
+.about-copy{font-size:19px;line-height:1.75;max-width:700px}.about-copy p{margin:0 0 18px}.about-copy .quiet{color:var(--muted)}
+.contact{padding-bottom:100px}.contact h2{font-size:34px;letter-spacing:-1px;font-weight:500;margin:0 0 12px}.contact p{color:var(--muted);margin:0 0 22px}
+footer{display:flex;justify-content:space-between;gap:20px;padding:25px 0 40px;border-top:1px solid var(--faint);color:var(--muted);font-size:12px}
+@media(max-width:680px){.page{width:min(100% - 36px,860px)}header{align-items:flex-start;gap:22px}nav{justify-content:flex-end;gap:10px 16px}.hero{padding:75px 0 65px}.hero-grid{grid-template-columns:1fr;gap:30px}.avatar{grid-row:1;width:78px;height:78px}.hero h1{letter-spacing:-2px}.section-head,.work{grid-template-columns:1fr;gap:10px}.section-head{margin-bottom:35px}.skills,.education{grid-template-columns:1fr}.cert{grid-template-columns:78px 1fr}.cert a{grid-column:2}.work{padding:25px 0}section{padding:55px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+]]></b:skin>
+</head>
+<body>
+<div class="page">
+<header><a class="name" href="#top">Anh Pham</a><nav aria-label="Main navigation"><a href="#work">Work</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#certificates">Certificates</a><a href="#about">About</a></nav></header>
+<main id="top">
+<div class="hero"><div class="hero-grid"><div><div class="kicker">Backend &amp; cloud engineer · Osaka</div><h1>I build reliable software and improve the systems around it.</h1><p>Go and PHP applications, cloud infrastructure, testing, automation, and thoughtful modernization of existing systems.</p><div class="hero-links"><a href="#work">Selected work ↓</a><a href="mailto:pqa.dev@gmail.com">Email ↗</a><a href="https://github.com/pham-anh">GitHub ↗</a></div></div><img alt="Anh Pham" class="avatar" src="https://raw.githubusercontent.com/pham-anh/pqa-site/draft/homepage-redesign/static/avatar2025.png"/></div></div>
+
+<section id="work"><div class="section-head"><h2>Selected work</h2><p>A few examples that show the kind of problems I enjoy solving: performance, reliability, and removing repetitive work.</p></div>
+<article class="work"><div class="work-label">2024–2025</div><div><h3>E-commerce data processing</h3><p>Expanded an aggregation pipeline from 200 million to 480 million records, covering nearly ten years of data instead of three.</p><p class="result">Runtime reduced from 60 minutes to 10 minutes.</p><div class="tags">BigQuery · Google Cloud · SQL</div></div></article>
+<article class="work"><div class="work-label">2025–present</div><div><h3>E-commerce search modernization</h3><p>Leading a three-person team moving a search platform from a single VM to Kubernetes, covering requirements, architecture, implementation, testing, release, and review.</p><p class="result">In testing, data-update triggers improved from ten-minute polling to typically within one minute.</p><div class="tags">Go · GKE · Elasticsearch · Debezium</div></div></article>
+<article class="work"><div class="work-label">2021–2022</div><div><h3>Cloud E2E testing platform</h3><p>Independently designed and built an automated test platform with parallel execution, reporting, failure reruns, and lower-cost infrastructure.</p><div class="tags">Playwright · Google Cloud · Laravel</div></div></article>
+<article class="work"><div class="work-label">Personal</div><div><h3><a href="https://123.pqa.icu/">SimpleMath ↗</a></h3><p>A Go application for generating elementary-school math worksheets, deployed on Cloud Run.</p></div></article>
+<article class="work"><div class="work-label">Personal</div><div><h3><a href="https://github.com/pham-anh/worth-money">Worth Money ↗</a></h3><p>An iOS income and expense tracker built with Flutter and Firebase. Previously available on the App Store.</p></div></article>
+</section>
+
+<section id="skills"><div class="section-head"><h2>Skills</h2><p>Grouped by the work they support, rather than presented as a wall of technology logos.</p></div><div class="skills">
+<div class="skill"><h3>Backend</h3><p>Go, Echo, PHP, Laravel, FuelPHP, API and CLI design</p></div>
+<div class="skill"><h3>Cloud &amp; infrastructure</h3><p>Google Cloud, GKE, Kubernetes, Cloud Run, Docker, Linux, Pub/Sub</p></div>
+<div class="skill"><h3>Data &amp; search</h3><p>MySQL, PostgreSQL, TimescaleDB, Firestore, Redis, BigQuery, Elasticsearch, Debezium</p></div>
+<div class="skill"><h3>Quality &amp; delivery</h3><p>Playwright, unit and integration testing, CI/CD, Git, Bitbucket Pipelines</p></div>
+</div></section>
+
+<section id="experience" class="timeline"><div class="section-head"><h2>Experience</h2><p>From interpretation to engineering, with communication and continuous learning connecting every stage.</p></div>
+<article class="work"><time>2018–present</time><div><h3>System Engineer · X-TRANS, Inc.</h3><p>Backend development, cloud architecture, performance improvements, monitoring systems, and test automation.</p><ul><li>Lead EC search modernization and review team code.</li><li>Improve legacy EC performance and release processes.</li><li>Build Go and PHP monitoring APIs, CLIs, and agents.</li><li>Design and operate automated test infrastructure.</li></ul></div></article>
+<article class="work"><time>2016–2018</time><div><h3>IT Engineer · Xtrans Vietnam</h3><p>Developed internal systems with PHP and MySQL, and introduced unit testing.</p></div></article>
+<article class="work"><time>2013–2016</time><div><h3>IT Communicator · Xtrans Vietnam</h3><p>Interpreted engineering discussions and translated specifications between Japanese and Vietnamese.</p></div></article>
+<article class="work"><time>2011–2013</time><div><h3>Interpreter · Nidec Tosok Vietnam</h3><p>Translated technical documents and interpreted meetings in automotive manufacturing.</p></div></article>
+</section>
+
+<section id="certificates"><div class="section-head"><h2>Certificates</h2><p>Technical learning backed by practical project work.</p></div>
+<div class="cert"><time>Oct 2025</time><strong>CKAD</strong><a href="https://www.credly.com/badges/2879bf0a-3d88-4ad2-86e0-ecfb484f96fa/public_url">Verify ↗</a></div>
+<div class="cert"><time>Mar 2024</time><strong>Professional Cloud DevOps Engineer</strong><a href="https://www.credly.com/badges/f0e13206-8910-477f-97d6-f65d498141d3">Verify ↗</a></div>
+<div class="cert"><time>Jun 2023</time><strong>PHP8 Engineer Certification — Semi-Advanced</strong><span>6jpm-aayd-zrmv</span></div>
+<div class="cert"><time>Oct 2022</time><strong>OSS-DB Silver</strong><a href="https://ma.educo-j.or.jp/d/EID900033563/m668bbh6cm">Verify ↗</a></div>
+<div class="cert"><time>Jan 2022</time><strong>Professional Cloud Developer</strong><a href="https://www.credly.com/badges/419f9f9a-ac32-4e5c-84eb-2d3d436c9f76">Verify ↗</a></div>
+<div class="cert"><time>Aug 2021</time><strong>Professional Cloud Architect</strong><a href="https://www.credly.com/badges/3adab8f5-d199-4f5c-886b-353cf43f45dc">Verify ↗</a></div>
+<div class="cert"><time>Jun 2021</time><strong>OMG UML Professional 2 — Foundation</strong><a href="https://www.omg.org/cgi-bin/certdetails.cgi?file=686748-uml-ocup2-foundation.jpg">Verify ↗</a></div>
+</section>
+
+<section id="education"><div class="section-head"><h2>Education &amp; languages</h2><p>Language remains an important part of how I understand requirements and collaborate.</p></div><div class="education"><div><div class="meta">2007–2011</div><h3>Bachelor of Japanese Studies</h3><p><a href="https://hcmussh.edu.vn/en">University of Social Sciences and Humanities, VNUHCM ↗</a></p></div><div><div class="language">Vietnamese <span>Native</span></div><div class="language">Japanese <span>JLPT N1</span></div><div class="language">English <span>TOEIC 865</span></div></div></div></section>
+
+<section id="about"><div class="section-head"><h2>About</h2><p>Different beginnings, the same curiosity.</p></div><div class="about-copy"><p>I started my career as a Japanese–Vietnamese interpreter and moved into engineering in 2016.</p><p class="quiet">Today I work across backend development, cloud infrastructure, and automated testing. Outside work, I keep learning—often beginning my day at 4 a.m. I also enjoy camping and growing plants on my balcony.</p></div></section>
+
+<section class="contact" id="contact"><h2>Let’s talk.</h2><p>About software, an interesting problem, or something you are building.</p><a href="mailto:pqa.dev@gmail.com">pqa.dev@gmail.com ↗</a></section>
+</main>
+<footer><span>© 2026 Pham Quynh Anh</span><span>Minimal dark concept</span></footer>
+</div>
+<b:section class="blogger-widgets" id="bloggerwidgets" maxwidgets="1" showaddelement="no"></b:section>
+</body>
+</html>
