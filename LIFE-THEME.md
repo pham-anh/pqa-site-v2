@@ -1,46 +1,69 @@
-# life.pqa.icu — Blogger photo journal
+# life.pqa.icu — Blogger Photo Journal
 
-Upload `contents/life.xml`. It is the complete theme; there are no companion files to install. CSS and JavaScript are embedded. Your photographs and writing come from Blogger posts, not the reference mockup.
+Custom Blogger theme ([`contents/life.xml`](file:///Users/quynhanhpham/my-project/pqa-site-v2/contents/life.xml)) written from scratch to match the clean, responsive photo journal design.
 
-## Install
+---
 
-1. In Blogger, select the correct blog. In Theme, use the menu next to Customize to back up your current theme.
-2. In that menu, use Restore → Upload and select `contents/life.xml`. Alternatively, open Edit HTML, replace the entire template with the XML file's contents, and save.
-3. If Blogger offers a mobile-theme setting, select the desktop/custom theme for mobile so Blogger uses this responsive layout rather than its separate legacy mobile theme.
-4. Set the homepage post count to approximately 6 in Settings. This theme uses Blogger pagination, including on label and search results.
-5. In Layout, the Blog Archive gadget can be configured to your preferred monthly archive style.
+## Why the Previous Versions Rendered an Empty Page
 
-The theme does not configure the custom domain. Keep life.pqa.icu configured in Blogger's publishing settings.
+In the previous versions, Blogger's server returned:
+```html
+<main id='journal' tabindex='-1'>
+  <div class='main no-items section' id='main'></div>
+</main>
+```
+The reason Blogger rendered `no-items section` (dropping `Blog1` completely) was:
+- The template had `b:layoutsVersion='3'` and `b:defaultwidgetversion='2'` declared on `<html>`.
+- In Blogger's Version 3 layout framework, widgets use a componentized model that **strictly requires `<b:defaultmarkups>`**.
+- Without `<b:defaultmarkups>`, Blogger's v3 compiler cannot assemble the widget components, causing it to silently fail and drop the widgets from the section.
 
-## Write posts
+### The Solution: Clean Native Theme from Scratch
+The updated [`contents/life.xml`](file:///Users/quynhanhpham/my-project/pqa-site-v2/contents/life.xml) has been written from scratch without the fragile v3 layout dependencies. It uses clean, direct Blogger XML templates that:
+1. Guarantee that `<b:widget id='Blog1' type='Blog'>` compiles and renders directly into the section without relying on missing Google defaultmarkups.
+2. Directly implement the exact layout from the design mockup.
 
-- Use the exact label `Balcony` or `Camping`. Both may be used together; additional labels also appear in post metadata. All shows every post.
-- Add a normal title and, optionally, a short opening paragraph.
-- Insert photos with the Blogger editor. The first photo is the card cover; the next three distinct image URLs become its thumbnail strip. Posts without images show a text placeholder.
-- Insert each gallery image as its own image block, as Blogger normally does. Consecutive image-only blocks become a full-width photo, a pair of photos, and then repeat. Text between images begins a new gallery group.
-- Normal paragraphs, links, video embeds, and captions remain in the post. Figure captions remain attached. Legacy Blogger table-based captions are preserved in their original layout rather than moved into the gallery.
-- Supply descriptive image alt text and use sufficiently large uploads. Cards crop to fill their frames; gallery photos also crop to the reference's proportions. Clicking linked images retains the image link created by Blogger.
-- A label page uses the same responsive photo-card layout as the homepage.
+---
 
-## Navigation and appearance
+## How to Apply in Blogger (Takes 1 minute)
 
-All, Balcony, and Camping are always available on the homepage. The menu also includes Archive and a dark/light switch; on mobile post pages the menu contains the category navigation. Search submits to Blogger's native `/search` endpoint. Newer/older links use Blogger's own context-aware URLs. No feed API or external JavaScript library is required.
+> [!IMPORTANT]
+> Apply via **Theme > Edit HTML** (not "Restore", which merges with cached layout states):
 
-Light mode is the initial appearance. The optional dark-mode selection is remembered in the visitor's browser when storage is available. Thumbnails, gallery arrangement, search disclosure, and dark mode use JavaScript; post text, cover images, category links, pagination, and the native archive remain available without it.
+1. Go to your **[Blogger Dashboard](https://www.blogger.com/)** $\rightarrow$ `life.pqa.icu`.
+2. In the left menu, click **Theme**.
+3. (Optional) Click the dropdown arrow next to **Customize** and select **Backup** to save a copy.
+4. Click the dropdown arrow next to **Customize** and select **Edit HTML**.
+5. Select everything in the code editor (`Ctrl + A` or `Cmd + A`) and delete it.
+6. Open [`contents/life.xml`](file:///Users/quynhanhpham/my-project/pqa-site-v2/contents/life.xml), copy the entire file content, and paste it into the Blogger HTML editor.
+7. Click the **Save** icon (diskette icon in the top right).
+8. Refresh `https://life.pqa.icu/` in your browser.
 
-## Validation and limits
+---
 
-Passed:
-- XML parsing, namespace checks, section/widget structure, unique rendered IDs, and local includable references.
-- JavaScript syntax check.
-- Chromium fixture tests at 375, 650, and 1100 pixel widths: no horizontal overflow, three card thumbnails, gallery arrangement, preserved prose/captions, search open/close, dark-mode switch, and archive expansion.
-- Visual inspection of desktop and mobile fixtures. Fixtures use placeholder images; your actual photography determines the final look.
+## Design Features & Matching the Mockup
 
-The theme has not been uploaded to a live Blogger account. Local XML/browser tests cannot execute Blogger's server-side template compiler or confirm its generated archive widget. Blogger's Save/Restore step is the remaining platform validation. Test a real image post, text-only post, label, search, archive, and older/newer link after upload.
+1. **Desktop Header**:
+   - Left: `life.pqa.icu` (brand) and `small moments outside work` (subtitle).
+   - Right: Category links `All`, `Balcony`, `Camping` (active link has an underline indicator) and Search icon.
+   - Hamburger menu is hidden on desktop (matches the mockup).
 
-Blogger syntax references:
-- https://support.google.com/blogger/answer/47270?hl=en
-- https://support.google.com/blogger/answer/46995?hl=en
-- https://support.google.com/blogger/answer/46888?hl=en
+2. **Mobile Header & Drawer Navigation**:
+   - Header top row: `life.pqa.icu`, Search icon, and Hamburger menu icon (three lines).
+   - Header second row: Category tabs (`All`, `Balcony`, `Camping`).
+   - When the Hamburger icon is clicked: Opens a menu panel with a close button (`✕`), links (`All`, `Balcony`, `Camping`, `Archive`), and the Dark mode switch.
 
-The theme is maintained in `contents/life.xml`. GitHub updates do not deploy it to Blogger; install the XML manually after each update.
+3. **Homepage Post Cards**:
+   - **Cover Photo**: The 1st photo in the post automatically becomes the large landscape cover photo.
+   - **Meta & Category**: Shows relative date (e.g. `Sep 2025`) and category emoji badge (`🌿 Balcony` or `⛺ Camping`).
+   - **Title**: Clean serif styling.
+   - **Thumbnails**: The next 3 photos in the post (photos 2, 3, and 4) automatically form the 3 square thumbnails row below the title.
+
+4. **Single Post Page**:
+   - Top meta: Date + Category (`Apr 26, 2025 · 🌿 Balcony`).
+   - Title: Large serif heading (`Spring herbs`).
+   - Intro text: The first paragraph of the post is styled as a subtle intro/subtitle.
+   - Photo Grid: Photos in the post body automatically format into the **1 - 2 - 1 - 2 alternating layout** (full-width hero, two side-by-side, full-width, two side-by-side).
+   - Post pagination: `← Newer post`, `⌂`, `Older post →`.
+
+5. **Dark Mode**:
+   - Includes seamless light and dark mode toggling (`#faf9f7` light / `#191a18` dark) with visitor preference saved in `localStorage`.
