@@ -4,6 +4,10 @@ Minimal dark personal homepage for [pqa.icu](https://pqa.icu), implemented as a 
 
 The portfolio content is embedded directly in the theme. A published Blogger post is not required for the homepage to appear.
 
+## Photo journal: life.pqa.icu
+
+The responsive Blogger photo journal theme is in [`contents/life.xml`](contents/life.xml). It includes Balcony/Camping labels, photo cards and galleries, search, archives, and optional dark mode. See [`LIFE-THEME.md`](LIFE-THEME.md) for installation, posting, and validation details.
+
 ## Repository structure
 
 ```text
@@ -13,7 +17,8 @@ The portfolio content is embedded directly in the theme. A published Blogger pos
 ├── CHATGPT_PROJECT.md
 ├── README.md
 └── contents/
-    └── hp.xml       # Complete Blogger theme
+    ├── hp.xml       # Personal homepage Blogger theme
+    └── life.xml     # Photo journal Blogger theme
 ```
 
 For reusable ChatGPT project context and the recommended update workflow, see [`CHATGPT_PROJECT.md`](CHATGPT_PROJECT.md).
