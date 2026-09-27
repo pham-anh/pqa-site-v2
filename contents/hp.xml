@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css="false" b:defaultwidgetversion="2" b:layoutsVersion="3" b:responsive="true" expr:dir="data:blog.languageDirection" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' expr:dir='data:blog.languageDirection' lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="Anh Pham — backend and cloud engineer in Osaka." name="description"/>
-<b:include data="blog" name="all-head-content"/>
+<meta charset='utf-8'/>
+<meta content='width=device-width,initial-scale=1' name='viewport'/>
+<meta content='Anh Pham — backend and cloud engineer in Osaka.' name='description'/>
+<b:include data='blog' name='all-head-content'/>
 <title><data:blog.pageTitle/></title>
 <b:skin><![CDATA[
 :root{--bg:#111212;--text:#deded9;--muted:#92948f;--faint:#242625;--link:#c5cec7;color-scheme:dark}
@@ -31,51 +31,51 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:25px 0 40px;b
 ]]></b:skin>
 </head>
 <body>
-<div class="page">
-<header><a class="name" href="#top">Anh Pham</a><nav aria-label="Main navigation"><a href="#work">Work</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#certificates">Certificates</a><a href="#about">About</a></nav></header>
-<main id="top">
-<div class="hero"><div class="hero-grid"><div><div class="kicker">Backend &amp; cloud engineer · Osaka</div><h1>I build reliable software and improve the systems around it.</h1><p>Go and PHP applications, cloud infrastructure, testing, automation, and thoughtful modernization of existing systems.</p><div class="hero-links"><a href="#work">Selected work ↓</a><a href="mailto:pqa.dev@gmail.com">Email ↗</a><a href="https://github.com/pham-anh">GitHub ↗</a></div></div><img alt="Anh Pham" class="avatar" src="https://raw.githubusercontent.com/pham-anh/pqa-site-v2/main/assets/avatar2025.png"/></div></div>
+<div class='page'>
+<header><a class='name' href='#top'>Anh Pham</a><nav aria-label='Main navigation'><a href='#work'>Work</a><a href='#skills'>Skills</a><a href='#experience'>Experience</a><a href='#certificates'>Certificates</a><a href='#about'>About</a></nav></header>
+<main id='top'>
+<div class='hero'><div class='hero-grid'><div><div class='kicker'>Backend &amp; cloud engineer &#183; Osaka</div><h1>I build reliable software and improve the systems around it.</h1><p>Go and PHP applications, cloud infrastructure, testing, automation, and thoughtful modernization of existing systems.</p><div class='hero-links'><a href='#work'>Selected work &#8595;</a><a href='mailto:pqa.dev@gmail.com'>Email &#8599;</a><a href='https://github.com/pham-anh'>GitHub &#8599;</a></div></div><img alt='Anh Pham' class='avatar' src='https://raw.githubusercontent.com/pham-anh/pqa-site-v2/main/assets/avatar2025.png'/></div></div>
 
-<section id="work"><div class="section-head"><h2>Selected work</h2><p>A few examples that show the kind of problems I enjoy solving: performance, reliability, and removing repetitive work.</p></div>
-<article class="work"><div class="work-label">2024–2025</div><div><h3>E-commerce data processing</h3><p>Expanded an aggregation pipeline from 200 million to 480 million records, covering nearly ten years of data instead of three.</p><p class="result">Runtime reduced from 60 minutes to 10 minutes.</p><div class="tags">BigQuery · Google Cloud · SQL</div></div></article>
-<article class="work"><div class="work-label">2025–present</div><div><h3>E-commerce search modernization</h3><p>Leading a three-person team moving a search platform from a single VM to Kubernetes, covering requirements, architecture, implementation, testing, release, and review.</p><p class="result">In testing, data-update triggers improved from ten-minute polling to typically within one minute.</p><div class="tags">Go · GKE · Elasticsearch · Debezium</div></div></article>
-<article class="work"><div class="work-label">2021–2022</div><div><h3>Cloud E2E testing platform</h3><p>Independently designed and built an automated test platform with parallel execution, reporting, failure reruns, and lower-cost infrastructure.</p><div class="tags">Playwright · Google Cloud · Laravel</div></div></article>
-<article class="work"><div class="work-label">Personal</div><div><h3><a href="https://123.pqa.icu/">SimpleMath ↗</a></h3><p>A Go application for generating elementary-school math worksheets, deployed on Cloud Run.</p></div></article>
-<article class="work"><div class="work-label">Personal</div><div><h3><a href="https://github.com/pham-anh/worth-money">Worth Money ↗</a></h3><p>An iOS income and expense tracker built with Flutter and Firebase. Previously available on the App Store.</p></div></article>
+<section id='work'><div class='section-head'><h2>Selected work</h2><p>A few examples that show the kind of problems I enjoy solving: performance, reliability, and removing repetitive work.</p></div>
+<article class='work'><div class='work-label'>2024&#8211;2025</div><div><h3>E-commerce data processing</h3><p>Expanded an aggregation pipeline from 200 million to 480 million records, covering nearly ten years of data instead of three.</p><p class='result'>Runtime reduced from 60 minutes to 10 minutes.</p><div class='tags'>BigQuery &#183; Google Cloud &#183; SQL</div></div></article>
+<article class='work'><div class='work-label'>2025&#8211;present</div><div><h3>E-commerce search modernization</h3><p>Leading a three-person team moving a search platform from a single VM to Kubernetes, covering requirements, architecture, implementation, testing, release, and review.</p><p class='result'>In testing, data-update triggers improved from ten-minute polling to typically within one minute.</p><div class='tags'>Go &#183; GKE &#183; Elasticsearch &#183; Debezium</div></div></article>
+<article class='work'><div class='work-label'>2021&#8211;2022</div><div><h3>Cloud E2E testing platform</h3><p>Independently designed and built an automated test platform with parallel execution, reporting, failure reruns, and lower-cost infrastructure.</p><div class='tags'>Playwright &#183; Google Cloud &#183; Laravel</div></div></article>
+<article class='work'><div class='work-label'>Personal</div><div><h3><a href='https://123.pqa.icu/'>SimpleMath &#8599;</a></h3><p>A Go application for generating elementary-school math worksheets, deployed on Cloud Run.</p></div></article>
+<article class='work'><div class='work-label'>Personal</div><div><h3><a href='https://github.com/pham-anh/worth-money'>Worth Money &#8599;</a></h3><p>An iOS income and expense tracker built with Flutter and Firebase. Previously available on the App Store.</p></div></article>
 </section>
 
-<section id="skills"><div class="section-head"><h2>Skills</h2><p>Grouped by the work they support, rather than presented as a wall of technology logos.</p></div><div class="skills">
-<div class="skill"><h3>Backend</h3><p>Go, Echo, PHP, Laravel, FuelPHP, API and CLI design</p></div>
-<div class="skill"><h3>Cloud &amp; infrastructure</h3><p>Google Cloud, GKE, Kubernetes, Cloud Run, Docker, Linux, Pub/Sub</p></div>
-<div class="skill"><h3>Data &amp; search</h3><p>MySQL, PostgreSQL, TimescaleDB, Firestore, Redis, BigQuery, Elasticsearch, Debezium</p></div>
-<div class="skill"><h3>Quality &amp; delivery</h3><p>Playwright, unit and integration testing, CI/CD, Git, Bitbucket Pipelines</p></div>
+<section id='skills'><div class='section-head'><h2>Skills</h2><p>Grouped by the work they support, rather than presented as a wall of technology logos.</p></div><div class='skills'>
+<div class='skill'><h3>Backend</h3><p>Go, Echo, PHP, Laravel, FuelPHP, API and CLI design</p></div>
+<div class='skill'><h3>Cloud &amp; infrastructure</h3><p>Google Cloud, GKE, Kubernetes, Cloud Run, Docker, Linux, Pub/Sub</p></div>
+<div class='skill'><h3>Data &amp; search</h3><p>MySQL, PostgreSQL, TimescaleDB, Firestore, Redis, BigQuery, Elasticsearch, Debezium</p></div>
+<div class='skill'><h3>Quality &amp; delivery</h3><p>Playwright, unit and integration testing, CI/CD, Git, Bitbucket Pipelines</p></div>
 </div></section>
 
-<section id="experience" class="timeline"><div class="section-head"><h2>Experience</h2><p>From interpretation to engineering, with communication and continuous learning connecting every stage.</p></div>
-<article class="work"><time>2018–present</time><div><h3>System Engineer · X-TRANS, Inc.</h3><p>Backend development, cloud architecture, performance improvements, monitoring systems, and test automation.</p><ul><li>Lead EC search modernization and review team code.</li><li>Improve legacy EC performance and release processes.</li><li>Build Go and PHP monitoring APIs, CLIs, and agents.</li><li>Design and operate automated test infrastructure.</li></ul></div></article>
-<article class="work"><time>2016–2018</time><div><h3>IT Engineer · Xtrans Vietnam</h3><p>Developed internal systems with PHP and MySQL, and introduced unit testing.</p></div></article>
-<article class="work"><time>2013–2016</time><div><h3>IT Communicator · Xtrans Vietnam</h3><p>Interpreted engineering discussions and translated specifications between Japanese and Vietnamese.</p></div></article>
-<article class="work"><time>2011–2013</time><div><h3>Interpreter · Nidec Tosok Vietnam</h3><p>Translated technical documents and interpreted meetings in automotive manufacturing.</p></div></article>
+<section class='timeline' id='experience'><div class='section-head'><h2>Experience</h2><p>From interpretation to engineering, with communication and continuous learning connecting every stage.</p></div>
+<article class='work'><time>2018&#8211;present</time><div><h3>System Engineer &#183; X-TRANS, Inc.</h3><p>Backend development, cloud architecture, performance improvements, monitoring systems, and test automation.</p><ul><li>Lead EC search modernization and review team code.</li><li>Improve legacy EC performance and release processes.</li><li>Build Go and PHP monitoring APIs, CLIs, and agents.</li><li>Design and operate automated test infrastructure.</li></ul></div></article>
+<article class='work'><time>2016&#8211;2018</time><div><h3>IT Engineer &#183; Xtrans Vietnam</h3><p>Developed internal systems with PHP and MySQL, and introduced unit testing.</p></div></article>
+<article class='work'><time>2013&#8211;2016</time><div><h3>IT Communicator &#183; Xtrans Vietnam</h3><p>Interpreted engineering discussions and translated specifications between Japanese and Vietnamese.</p></div></article>
+<article class='work'><time>2011&#8211;2013</time><div><h3>Interpreter &#183; Nidec Tosok Vietnam</h3><p>Translated technical documents and interpreted meetings in automotive manufacturing.</p></div></article>
 </section>
 
-<section id="certificates"><div class="section-head"><h2>Certificates</h2><p>Technical learning backed by practical project work.</p></div>
-<div class="cert"><time>Oct 2025</time><strong>CKAD</strong><a href="https://www.credly.com/badges/2879bf0a-3d88-4ad2-86e0-ecfb484f96fa/public_url">Verify ↗</a></div>
-<div class="cert"><time>Mar 2024</time><strong>Professional Cloud DevOps Engineer</strong><a href="https://www.credly.com/badges/f0e13206-8910-477f-97d6-f65d498141d3">Verify ↗</a></div>
-<div class="cert"><time>Jun 2023</time><strong>PHP8 Engineer Certification — Semi-Advanced</strong><span>6jpm-aayd-zrmv</span></div>
-<div class="cert"><time>Oct 2022</time><strong>OSS-DB Silver</strong><a href="https://ma.educo-j.or.jp/d/EID900033563/m668bbh6cm">Verify ↗</a></div>
-<div class="cert"><time>Jan 2022</time><strong>Professional Cloud Developer</strong><a href="https://www.credly.com/badges/419f9f9a-ac32-4e5c-84eb-2d3d436c9f76">Verify ↗</a></div>
-<div class="cert"><time>Aug 2021</time><strong>Professional Cloud Architect</strong><a href="https://www.credly.com/badges/3adab8f5-d199-4f5c-886b-353cf43f45dc">Verify ↗</a></div>
-<div class="cert"><time>Jun 2021</time><strong>OMG UML Professional 2 — Foundation</strong><a href="https://www.omg.org/cgi-bin/certdetails.cgi?file=686748-uml-ocup2-foundation.jpg">Verify ↗</a></div>
+<section id='certificates'><div class='section-head'><h2>Certificates</h2><p>Technical learning backed by practical project work.</p></div>
+<div class='cert'><time>Oct 2025</time><strong>CKAD</strong><a href='https://www.credly.com/badges/2879bf0a-3d88-4ad2-86e0-ecfb484f96fa/public_url'>Verify &#8599;</a></div>
+<div class='cert'><time>Mar 2024</time><strong>Professional Cloud DevOps Engineer</strong><a href='https://www.credly.com/badges/f0e13206-8910-477f-97d6-f65d498141d3'>Verify &#8599;</a></div>
+<div class='cert'><time>Jun 2023</time><strong>PHP8 Engineer Certification &#8212; Semi-Advanced</strong><span>6jpm-aayd-zrmv</span></div>
+<div class='cert'><time>Oct 2022</time><strong>OSS-DB Silver</strong><a href='https://ma.educo-j.or.jp/d/EID900033563/m668bbh6cm'>Verify &#8599;</a></div>
+<div class='cert'><time>Jan 2022</time><strong>Professional Cloud Developer</strong><a href='https://www.credly.com/badges/419f9f9a-ac32-4e5c-84eb-2d3d436c9f76'>Verify &#8599;</a></div>
+<div class='cert'><time>Aug 2021</time><strong>Professional Cloud Architect</strong><a href='https://www.credly.com/badges/3adab8f5-d199-4f5c-886b-353cf43f45dc'>Verify &#8599;</a></div>
+<div class='cert'><time>Jun 2021</time><strong>OMG UML Professional 2 &#8212; Foundation</strong><a href='https://www.omg.org/cgi-bin/certdetails.cgi?file=686748-uml-ocup2-foundation.jpg'>Verify &#8599;</a></div>
 </section>
 
-<section id="education"><div class="section-head"><h2>Education &amp; languages</h2><p>Language remains an important part of how I understand requirements and collaborate.</p></div><div class="education"><div><div class="meta">2007–2011</div><h3>Bachelor of Japanese Studies</h3><p><a href="https://hcmussh.edu.vn/en">University of Social Sciences and Humanities, VNUHCM ↗</a></p></div><div><div class="language">Vietnamese <span>Native</span></div><div class="language">Japanese <span>JLPT N1</span></div><div class="language">English <span>TOEIC 865</span></div></div></div></section>
+<section id='education'><div class='section-head'><h2>Education &amp; languages</h2><p>Language remains an important part of how I understand requirements and collaborate.</p></div><div class='education'><div><div class='meta'>2007&#8211;2011</div><h3>Bachelor of Japanese Studies</h3><p><a href='https://hcmussh.edu.vn/en'>University of Social Sciences and Humanities, VNUHCM &#8599;</a></p></div><div><div class='language'>Vietnamese <span>Native</span></div><div class='language'>Japanese <span>JLPT N1</span></div><div class='language'>English <span>TOEIC 865</span></div></div></div></section>
 
-<section id="about"><div class="section-head"><h2>About</h2><p>Different beginnings, the same curiosity.</p></div><div class="about-copy"><p>I started my career as a Japanese–Vietnamese interpreter and moved into engineering in 2016.</p><p class="quiet">Today I work across backend development, cloud infrastructure, and automated testing. Outside work, I keep learning—often beginning my day at 4 a.m. I also enjoy camping and growing plants on my balcony.</p></div></section>
+<section id='about'><div class='section-head'><h2>About</h2><p>Different beginnings, the same curiosity.</p></div><div class='about-copy'><p>I started my career as a Japanese&#8211;Vietnamese interpreter and moved into engineering in 2016.</p><p class='quiet'>Today I work across backend development, cloud infrastructure, and automated testing. Outside work, I keep learning&#8212;often beginning my day at 4 a.m. I also enjoy <a href='https://life.pqa.icu'>camping and growing plants on my balcony</a>.</p></div></section>
 
-<section class="contact" id="contact"><h2>Let’s talk.</h2><p>About software, an interesting problem, or something you are building.</p><a href="mailto:pqa.dev@gmail.com">pqa.dev@gmail.com ↗</a></section>
+<section class='contact' id='contact'><h2>Let&#8217;s talk.</h2><p>About software, an interesting problem, or something you are building.</p><a href='mailto:pqa.dev@gmail.com'>pqa.dev@gmail.com &#8599;</a></section>
 </main>
-<footer><span>© 2026 Pham Quynh Anh</span><span>Minimal dark concept</span></footer>
+<footer><span>&#169; 2026 Pham Quynh Anh</span><span>Minimal dark concept</span></footer>
 </div>
-<b:section class="blogger-widgets" id="bloggerwidgets" maxwidgets="1" showaddelement="no"></b:section>
+<b:section class='blogger-widgets' id='bloggerwidgets' maxwidgets='1' showaddelement='no'/>
 </body>
 </html>
